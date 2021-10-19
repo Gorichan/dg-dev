@@ -3,12 +3,12 @@ $Ebony-Clay: #2c2f3f;
 $Curious-Blue: #149ddd;
 $Spun-Pearl: #a8a9b4;
 
-header {
-    &__box {
-        display: flex;
-        flex-direction: column;
-    }
+
+main{
+    margin-left: 300px;
+    overflow: hidden;
 }
+
 
 .header {
     position: fixed;
@@ -239,4 +239,15 @@ header {
             margin: 0 0 20px 0;
         }
     }
+}
+
+.hero{
+    background-image: url(../img/bg__hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    width: 100vw;
+    height: 100vh;
 }

@@ -1,11 +1,6 @@
-header__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+main {
+  margin-left: 300px;
+  overflow: hidden;
 }
 
 .header {
@@ -316,5 +311,14 @@ header__box {
   .header__list li {
     margin: 0 0 20px 0;
   }
+}
+
+.hero {
+  background-image: url(../img/bg__hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
