@@ -2,18 +2,25 @@ $Black-Pearl: #040b14;
 $Ebony-Clay: #2c2f3f;
 $Curious-Blue: #149ddd;
 $Spun-Pearl: #a8a9b4;
+$Link-Water: #f5f8fd;
+$Cornflower-Blue: #6665ee;
 $While: #fff;
+$Black: #000;
 $Biscay: #173b6c;
-body{
-	font-family: 'Roboto', sans-serif;
+$Gallery: #f0f0f0;
+body {
+    font-family: "Roboto", sans-serif;
     font-weight: normal;
     font-style: normal;
-} 
+}
 main {
     margin-left: 300px;
     overflow: hidden;
     section {
         padding: 50px 0;
+    }
+    @media (max-width: 767px) {
+        margin-left: 0;
     }
 }
 .container {
@@ -21,7 +28,35 @@ main {
     margin: 0 auto;
     padding: 0 15px;
 }
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20 px;
+    padding-bottom: 20 px;
+    position: relative;
+    color: $Biscay;
+    padding-bottom: 15px;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: $Curious-Blue;
+        bottom: 0;
+        left: 0;
+    }
+}
+.subtitle {
+    font-size: 25px;
+    margin: 15px 0;
+}
 .header {
     position: fixed;
     top: 0;
@@ -275,77 +310,203 @@ main {
 }
 
 .about {
-    .title__box {
-        .title {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 20 px;
-            padding-bottom: 20 px;
-            position: relative;
-            color: $Biscay;
-            padding-bottom: 15px;
-            &::after {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 50px;
-                height: 3px;
-                background: $Curious-Blue;
-                bottom: 0;
-                left: 0;
-            }
-        }
-        .subtitle {
-            font-size: 25px;
-            margin: 15px 0;
-        }
-    }
     &__content {
-     display: flex;
-     justify-content: center;
+        display: flex;
+        justify-content: center;
         .about__img {
-            max-width: 300px;
+            width: 200px;
             height: auto;
         }
-.txt{
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    &__header{
-        h3{
-            font-weight: 700;
-            font-size: 26px;
-            color: $Biscay;
-            margin-bottom: 5px;
+        .txt {
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &__header {
+                h3 {
+                    font-weight: 700;
+                    font-size: 26px;
+                    color: $Biscay;
+                    margin-bottom: 5px;
+                }
+                font-size: 20px;
+            }
+            &__main {
+                max-width: 800px;
+                &_box{
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    ul {
+                        li {
+                            margin: 10px 0;
+                            span {
+                                font-weight: bold;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+                }
+                
+            &__footer {
+                font-size: 20px;
+            }
         }
-        font-size: 20px;
     }
-    &__main{
-        font-size: 20px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        ul{
-            li{
-                margin: 10px 0;
-                span{
-                    font-weight: bold;
-                    margin-right: 5px;
+}
+
+.skills {
+    background-color: $Link-Water;
+    .skills-bar {
+        background: $While;
+        border-radius: 10px;
+        padding: 25px 30px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        .bar {
+            margin: 20px 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            .info {
+                margin-bottom: 5px;
+                span {
+                    font-style: 17px;
+                    font-weight: 500;
+                    opacity: 0;
+                        animation: showText2 0.5s 1s linear forwards;
+                }
+            }
+            .progress-line {
+                position: relative;
+                height: 10px;
+                width: 100%;
+                
+                background: $Gallery;
+                box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+                &.html {
+                    span {
+                        width: 90%;
+                        &::after {
+                            content: "90%";
+                        }
+                    }
+                }
+                &.css {
+                    span {
+                        width: 90%;
+                        &::after {
+                            content: "90%";
+                        }
+                    }
+                }
+                &.js {
+                    span {
+                        width: 40%;
+                        &::after {
+                            content: "40%";
+                        }
+                    }
+                }
+                &.scss {
+                    span {
+                        width: 70%;
+                        &::after {
+                            content: "70%";
+                        }
+                    }
+                }
+                &.gulp {
+                    span {
+                        width: 45%;
+                        &::after {
+                            content: "45%";
+                        }
+                    }
+                }
+                &.bootstrap {
+                    span {
+                        width: 80%;
+                        &::after {
+                            content: "80%";
+                        }
+                    }
+                }
+                &.wordpress {
+                    span {
+                        width: 30%;
+                        &::after {
+                            content: "30%";
+                        }
+                    }
+                }
+                &.figma {
+                    span {
+                        width: 65%;
+                        &::after {
+                            content: "65%";
+                        }
+                    }
+                }
+                
+                span {
+                    height: 100%;
+                    width: 80%;
+                    position: absolute;
+                    background: $Cornflower-Blue;
+                    border-radius: 10px;
+                    transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        right: 0;
+                        top: -10px;
+                        height: 0;
+                        width: 0;
+                        border: 7px solid transparent;
+                        border-bottom-width: 0px;
+                        border-right-width: 0px;
+                        border-top-color: $Black;
+                        opacity: 0;
+                        animation: showText2 0.5s 1.5s linear forwards;
+                    }
+                    &::after {
+                        position: absolute;
+                        right: 0;
+                        top: -22px;
+                        color: #fff;
+                        font-size: 12px;
+                        font-weight: 500;
+                        background: $Black;
+                        padding: 1px 8px;
+                        border-radius: 3px;
+                        opacity: 0;
+                        animation: showText2 0.5s 1.5s linear forwards;
+                    }
                 }
             }
         }
-
-    }
-    &__footer{
-        font-size: 20px;
     }
 }
-        
+@keyframes showText {
+    100%{
+       opacity: 1; 
+    }
+}
+@keyframes showText2 {
+    100%{
+       opacity: 1; 
     }
 }
 
-
-  
-
-
+@keyframes animate {
+    100%{
+       transform: scaleX(1); 
+    }
+}

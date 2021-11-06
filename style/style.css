@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -13,10 +13,49 @@ main section {
   padding: 50px 0;
 }
 
+@media (max-width: 767px) {
+  main {
+    margin-left: 0;
+  }
+}
+
 .container {
   max-width: 1520px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20 px;
+  padding-bottom: 20 px;
+  position: relative;
+  color: #173b6c;
+  padding-bottom: 15px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+.subtitle {
+  font-size: 25px;
+  margin: 15px 0;
 }
 
 .header {
@@ -360,32 +399,6 @@ main section {
   font-family: "Poppins", sans-serif;
 }
 
-.about .title__box .title {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20 px;
-  padding-bottom: 20 px;
-  position: relative;
-  color: #173b6c;
-  padding-bottom: 15px;
-}
-
-.about .title__box .title::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #149ddd;
-  bottom: 0;
-  left: 0;
-}
-
-.about .title__box .subtitle {
-  font-size: 25px;
-  margin: 15px 0;
-}
-
 .about__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,7 +409,7 @@ main section {
 }
 
 .about__content .about__img {
-  max-width: 300px;
+  width: 200px;
   height: auto;
 }
 
@@ -426,27 +439,226 @@ main section {
 }
 
 .about__content .txt__main {
+  max-width: 800px;
+}
+
+.about__content .txt__main_box {
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.about__content .txt__main ul li {
+.about__content .txt__main_box ul li {
   margin: 10px 0;
 }
 
-.about__content .txt__main ul li span {
+.about__content .txt__main_box ul li span {
   font-weight: bold;
   margin-right: 5px;
 }
 
 .about__content .txt__footer {
   font-size: 20px;
+}
+
+.skills {
+  background-color: #f5f8fd;
+}
+
+.skills .skills-bar {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills .skills-bar .bar {
+  margin: 20px 0;
+}
+
+.skills .skills-bar .bar:first-child {
+  margin-top: 0;
+}
+
+.skills .skills-bar .bar .info {
+  margin-bottom: 5px;
+}
+
+.skills .skills-bar .bar .info span {
+  font-style: 17px;
+  font-weight: 500;
+  opacity: 0;
+  -webkit-animation: showText2 0.5s 1s linear forwards;
+          animation: showText2 0.5s 1s linear forwards;
+}
+
+.skills .skills-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+          box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+          animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.skills .skills-bar .bar .progress-line.html span {
+  width: 90%;
+}
+
+.skills .skills-bar .bar .progress-line.html span::after {
+  content: "90%";
+}
+
+.skills .skills-bar .bar .progress-line.css span {
+  width: 90%;
+}
+
+.skills .skills-bar .bar .progress-line.css span::after {
+  content: "90%";
+}
+
+.skills .skills-bar .bar .progress-line.js span {
+  width: 40%;
+}
+
+.skills .skills-bar .bar .progress-line.js span::after {
+  content: "40%";
+}
+
+.skills .skills-bar .bar .progress-line.scss span {
+  width: 70%;
+}
+
+.skills .skills-bar .bar .progress-line.scss span::after {
+  content: "70%";
+}
+
+.skills .skills-bar .bar .progress-line.gulp span {
+  width: 45%;
+}
+
+.skills .skills-bar .bar .progress-line.gulp span::after {
+  content: "45%";
+}
+
+.skills .skills-bar .bar .progress-line.bootstrap span {
+  width: 80%;
+}
+
+.skills .skills-bar .bar .progress-line.bootstrap span::after {
+  content: "80%";
+}
+
+.skills .skills-bar .bar .progress-line.wordpress span {
+  width: 30%;
+}
+
+.skills .skills-bar .bar .progress-line.wordpress span::after {
+  content: "30%";
+}
+
+.skills .skills-bar .bar .progress-line.figma span {
+  width: 65%;
+}
+
+.skills .skills-bar .bar .progress-line.figma span::after {
+  content: "65%";
+}
+
+.skills .skills-bar .bar .progress-line span {
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  background: #6665ee;
+  border-radius: 10px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+          animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.skills .skills-bar .bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -10px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  -webkit-animation: showText2 0.5s 1.5s linear forwards;
+          animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.skills .skills-bar .bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -22px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  background: #000;
+  padding: 1px 8px;
+  border-radius: 3px;
+  opacity: 0;
+  -webkit-animation: showText2 0.5s 1.5s linear forwards;
+          animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@-webkit-keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animate {
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes animate {
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */
