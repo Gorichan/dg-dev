@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -277,7 +277,7 @@ img {
     height: 50px;
   }
   .header__burger {
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 15px;
     z-index: 3;
@@ -628,24 +628,42 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  text-align: left;
+}
+
+.resume__content_left {
+  max-width: 60%;
 }
 
 .sumary {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  padding: 0 0 20px 0;
   position: relative;
 }
 
 .sumary__title h2 {
   font-size: 26px;
   font-weight: 700;
-  margin-top: 20 px;
-  margin-bottom: 20 px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #050d18;
+}
+
+.sumary__content {
+  border-left: 2px solid #1f5297;
+  padding: 0 0 20px 20px;
+  position: relative;
+}
+
+.sumary__content::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -11px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
 }
 
 .sumary__content h3 {
@@ -660,28 +678,30 @@ img {
 
 .sumary__content ul li {
   list-style: inside;
+  padding: 10px 0;
 }
 
 .sumary__content p {
-  max-width: 50%;
+  margin: 20px 0;
+  line-height: 20px;
 }
 
 .education {
   margin-top: 40px;
-  padding: 0 0 20px 20px;
-  border-left: 2px solid #1f5297;
-  position: relative;
 }
 
 .education__title h2 {
   font-size: 26px;
   font-weight: 700;
-  margin-top: 20 px;
-  margin-bottom: 20 px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #050d18;
 }
 
 .education__content {
+  padding: 0 0 20px 20px;
+  border-left: 2px solid #1f5297;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -691,14 +711,25 @@ img {
           flex-direction: column;
 }
 
-.education__content h3 {
+.education__content::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -11px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+.education__content h4 {
   line-height: 18px;
-  font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #050d18;
-  margin-bottom: 10 px;
+  margin-bottom: 10px;
 }
 
 .education__content p {
@@ -719,15 +750,186 @@ img {
 
 .education__content p span {
   font-size: 16px;
-  /* display: inline-block; */
   font-weight: 600;
+}
+
+.education__content .education__txt {
+  margin-bottom: 20px;
 }
 
 .professional-experience {
   padding: 0 0 20px 20px;
-  margin-top: -2px;
+  height: 100%;
+}
+
+.professional-experience .professional__title {
+  height: 100%;
+}
+
+.professional-experience .professional__title h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.professional-experience .professional__content {
+  padding: 0 0 20px 20px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border-left: 2px solid #1f5297;
   position: relative;
+}
+
+.professional-experience .professional__content::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -11px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+.professional-experience .professional__content_text h3 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.professional-experience .professional__content_text span {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5 px 15 px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.professional-experience .professional__content_text p {
+  font-size: 20px;
+}
+
+.portfolio {
+  background: #f5f8fd;
+}
+
+.tabs {
+  margin: 30px 0;
+  /* &__item {
+    } */
+}
+
+.tabs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50px;
+}
+
+.tabs__btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  background: #fff;
+  margin-bottom: 5px;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 0 10px;
+  border-radius: 50px;
+}
+
+.tabs__btn:hover {
+  color: #149ddd;
+}
+
+.tabs__btn--active {
+  color: #149ddd;
+  pointer-events: none;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content__img {
+  max-width: 300px;
+  max-height: 300px;
+  margin: 5px 5px;
+  position: relative;
+}
+
+.content__img::before {
+  position: absolute;
+  content: "Go to";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(20, 157, 221, 0.75);
+  height: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.content__img:hover::before {
+  opacity: 1;
+  height: 40px;
 }
 
 @-webkit-keyframes showText {

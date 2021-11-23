@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="style/rezet.css">
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./style/rezet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
@@ -254,17 +254,17 @@
                                 </h2>
                             </div>
                             <div class="education__content">
-                                <h3>
+                                <h4>
                                     Bilhorod-Dnistrovskyi College of Economics adn Law
-                                </h3>
+                                </h4>
                                 <p><span>2014-2017</span></p>
-                                <span>Junior Specialist</span>
-                                <h3>
+                                <span class="education__txt">Junior Specialist</span>
+                                <h4>
 
                                     Bilhorod-Dnistrovskyi College of Economics adn Law
-                                </h3>
+                                </h4>
                                 <p><span>2017-2020</span></p>
-                                <span>Bachelor's degree</span>
+                                <span class="education__txt">Bachelor's degree</span>
                             </div>
                         </div>
                     </div>
@@ -278,10 +278,12 @@
                                     <div class="professional__content_text">
                                         <h3>Freelance Web Development</h3>
                                         <span>2020-2021</span>
+                                        <p>Creation of sites of different complexity, optimization, promotion and installation on CRM (Wordpress)</p>
                                     </div>
                                     <div class="professional__content_text">
                                         <h3>lead Leaders </h3>
                                         <span>2020-2021</span>
+                                        <p>Creation of sites of different complexity, optimization, promotion and installation on CRM (Wordpress)</p>
                                     </div>
                                 </div>
                             </div>
@@ -292,14 +294,110 @@
                     </div>
                 </div>
         </section>
+        
+        <section class="portfolio">
+    <div class="container">
+        <h2 class="title">
+            Portfolio
+        </h2>
+        <div class="tabs">
+            <ul class="tabs__list">
+                <li class="tabs__item tabs__item--active"><button class="tabs__btn tabs__btn--active" data-tabs-path="business">Business card website</button></li>
+                <li class="tabs__item"><button class="tabs__btn" data-tabs-path="online">Online store</button></li>
+                <li class="tabs__item"><button class="tabs__btn" data-tabs-path="corporate">CORPORATE SITES</button></li>
+                <li class="tabs__item"><button class="tabs__btn" data-tabs-path="image">IMAGE SITE</button></li>
+            </ul>
+            <div class="tabs__content tabs__content--active" data-tabs-target="business" >
+<div class="content">
+    <div class="content__img">
+        <a href="#">
+            <img src="./img/logo.jpg" alt="logo">
+        </a>
+    </div>
+</div>
+            </div>
+            <div class="tabs__content" data-tabs-target="online" >
+                <div class="content">
+                    <div class="content__img">
+                        <a href="#">
+                            <img src="./img/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="content__img">
+                        <a href="#">
+                            <img src="./img/tatto.jpg" alt="tattoo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__content" data-tabs-target="corporate" >
+                <div class="content">
+                    <div class="content__img">
+                        <a href="#">
+                            <img src="./img/tatto.jpg" alt="tattoo">
+                        </a>
+                    </div>
+                    
+                        <div class="content__img">
+                            <a href="#">
+                                <img src="./img/logo.jpg" alt="logo">
+                            </a>
+                        </div>
+                        <div class="content__img">
+                            <a href="#">
+                                <img src="./img/tatto.jpg" alt="tattoo">
+                            </a>
+                        </div>
+                
+            </div>
+            <div class="tabs__content" data-tabs-target="business" >
+                <div class="content">
+                    <div class="content__img">
+                        <a href="#">
+                            <img src="./img/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabs__content" data-tabs-target="image" >
+            <div class="content">
+                <div class="content__img">
+                    <a href="#">
+                        <img src="./img/tatto.jpg" alt="tattoo">
+                    </a>
+                </div>
+                
+                    <div class="content__img">
+                        <a href="#">
+                            <img src="./img/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="content__img">
+                        <a href="#">
+                            <img src="./img/tatto.jpg" alt="tattoo">
+                        </a>
+                    </div>
+                    <div class="content__img">
+                        <a href="#">
+                            <img src="./img/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+            
+        </div>
+    </div>
+    </div>
+    
+    
 
+        </section>
 
     </main>
 
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
